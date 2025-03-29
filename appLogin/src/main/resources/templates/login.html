@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <style>
+        body {
+            background-color: #b8d6b0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            box-shadow: inset -30px 0 50px rgba(0, 0, 0, 0.3);
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 250px;
+        }
+        .login-container h2 {
+            color: #6fbcaa;
+        }
+        .input-field {
+            width: 90%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-btn {
+            background-color: #259b9b;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        .login-btn:hover {
+            background-color: #1e7e7e;
+        }
+
+        /* Estilo do link de cadastro lateral */
+        .register-link {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #259b9b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .register-link:hover {
+            color: #1e7e7e;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/logar" method="post">
+            <input type="text" name="email" class="input-field" placeholder="Usuário" required>
+            <input type="password" name="senha" class="input-field" placeholder="Senha" required>
+            <button type="submit" class="login-btn">Entrar</button>
+        </form>
+        <a href="/cadastroUsuario" class="register-link">Cadastrar</a>
+    </div>
+</body>
+</html>
